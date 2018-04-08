@@ -1,0 +1,29 @@
+{
+  "name": "jsx-bem-classes",
+  "version": "0.0.0",
+  "description": "Decorator/utility function to expand BEM classes in JSX",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterjwest/jsx-bem-classes.git"
+  },
+  "author": "Peter West <peterjwest3@gmail.com> (https://github.com/peterjwest/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterjwest/jsx-bem-classes/issues"
+  },
+  "homepage": "https://github.com/peterjwest/jsx-bem-classes#readme",
+  "peerDependencies": {
+    "react": ">12"
+  },
+  "dependencies": {
+    "@types/lodash": "4.14.106",
+    "lodash": "4.17.5"
+  },
+  "devDependencies": {
+    "typescript": "2.8.1"
+  }
+}
