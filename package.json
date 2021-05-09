@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@types/lodash": "4.14.106",
-    "lodash": "4.17.5"
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "@types/js-beautify": "0.0.31",
