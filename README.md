@@ -1,4 +1,4 @@
-# jsx-bem-classes [![npm version][npm-badge]][npm-url] [![build status][circle-badge]][circle-url] [![coverage status][coverage-badge]][coverage-url]
+# react-bem-classes [![npm version][npm-badge]][npm-url] [![build status][circle-badge]][circle-url] [![coverage status][coverage-badge]][coverage-url]
 
 A utility for writing more concise [BEM](http://getbem.com/) style classes in React.
 
@@ -31,7 +31,7 @@ You can write this:
 <!-- snippet: tsx,mjsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'jsx-bem-classes';
+import { expandClasses } from 'react-bem-classes';
 
 class Component extends React.Component {
   render() {
@@ -60,7 +60,7 @@ If you want to use the original BEM style you can:
 <!-- snippet: tsx,mjsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'jsx-bem-classes';
+import { expandClasses } from 'react-bem-classes';
 
 const expandClassesClassic = (input) => expandClasses(input, { element: '__', modifier: '--' });
 
@@ -84,7 +84,7 @@ You can also change the selector character:
 <!-- snippet: tsx,mjsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'jsx-bem-classes';
+import { expandClasses } from 'react-bem-classes';
 
 class Component extends React.Component {
   render() {
@@ -106,7 +106,7 @@ If you're using Typescript, you can instead use the decorator:
 <!-- snippet: tsx -->
 ```tsx
 import React from 'react';
-import expandClasses from 'jsx-bem-classes';
+import expandClasses from 'react-bem-classes';
 
 class Component extends React.Component {
   @expandClasses({ selector: '%' })
@@ -129,7 +129,7 @@ You can also use the utility with CommonJS and without JSX support:
 <!-- snippet: cjs -->
 ```js
 const { createElement, Component } = require('react');
-const { expandClasses } = require('jsx-bem-classes');
+const { expandClasses } = require('react-bem-classes');
 
 class SomeComponent extends Component {
   render() {
@@ -150,11 +150,11 @@ class SomeComponent extends Component {
 }
 ```
 
-[npm-badge]: https://badge.fury.io/js/jsx-bem-classes.svg
-[npm-url]: https://www.npmjs.com/package/jsx-bem-classes
+[npm-badge]: https://badge.fury.io/js/react-bem-classes.svg
+[npm-url]: https://www.npmjs.com/package/react-bem-classes
 
-[circle-badge]: https://circleci.com/gh/peterjwest/jsx-bem-classes.svg?style=shield
-[circle-url]: https://circleci.com/gh/peterjwest/jsx-bem-classes
+[circle-badge]: https://circleci.com/gh/peterjwest/react-bem-classes.svg?style=shield
+[circle-url]: https://circleci.com/gh/peterjwest/react-bem-classes
 
-[coverage-badge]: https://coveralls.io/repos/peterjwest/jsx-bem-classes/badge.svg?branch=main&service=github
-[coverage-url]: https://coveralls.io/github/peterjwest/jsx-bem-classes?branch=main
+[coverage-badge]: https://coveralls.io/repos/peterjwest/react-bem-classes/badge.svg?branch=main&service=github
+[coverage-url]: https://coveralls.io/github/peterjwest/react-bem-classes?branch=main

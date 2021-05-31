@@ -1,7 +1,7 @@
 {
-  "name": "jsx-bem-classes",
+  "name": "react-bem-classes",
   "version": "0.0.1",
-  "description": "Decorator/utility function to expand BEM classes in JSX",
+  "description": "Decorator/utility function to expand BEM classes in React elements",
   "main": "./build/wrapper.js",
   "exports": {
     "import": "./build/es6/index.mjs",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:peterjwest/jsx-bem-classes.git"
+    "url": "git@github.com:peterjwest/react-bem-classes.git"
   },
   "files": [
     "/build"
@@ -20,7 +20,7 @@
   "author": "Peter West",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/peterjwest/jsx-bem-classes/issues"
+    "url": "https://github.com/peterjwest/react-bem-classes/issues"
   },
   "keywords": [
     "jsx",
@@ -30,7 +30,7 @@
     "class",
     "bem"
   ],
-  "homepage": "https://github.com/peterjwest/jsx-bem-classes#readme",
+  "homepage": "https://github.com/peterjwest/react-bem-classes#readme",
   "scripts": {
     "audit-dependencies": "yarn audit; [[ $? -ge 4 ]] && exit 1 || exit 0",
     "build": "yarn build:es6 && yarn build:es5",
