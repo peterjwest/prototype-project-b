@@ -1,4 +1,4 @@
-# jsx-bem-classes
+# jsx-bem-classes [![npm version][npm-badge]][npm-url] [![build status][circle-badge]][circle-url] [![coverage status][coverage-badge]][coverage-url]
 
 A utility for writing more concise [BEM](http://getbem.com/) style classes in React.
 
@@ -150,7 +150,11 @@ class SomeComponent extends Component {
 }
 ```
 
-## TODO
+[npm-badge]: https://badge.fury.io/js/jsx-bem-classes.svg
+[npm-url]: https://www.npmjs.com/package/jsx-bem-classes
 
-- Build process
-- CI
+[circle-badge]: https://circleci.com/gh/peterjwest/jsx-bem-classes.svg?style=shield
+[circle-url]: https://circleci.com/gh/peterjwest/jsx-bem-classes
+
+[coverage-badge]: https://coveralls.io/repos/peterjwest/jsx-bem-classes/badge.svg?branch=main&service=github
+[coverage-url]: https://coveralls.io/github/peterjwest/jsx-bem-classes?branch=main
