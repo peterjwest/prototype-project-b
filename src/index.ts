@@ -1,5 +1,5 @@
-import { createElement, Children, ReactElement } from 'react';
-import { times, flatten } from 'lodash';
+import React from 'react';
+import lodash from 'lodash';
 
 interface Options {
   selector: string;
@@ -40,7 +40,7 @@ export function createMatchers(options: Options): Matchers {
 
 export function replaceClass(classAttr: string, matchers: Matchers, baseClass?: string) {
   const classes = classAttr.split(/\s+/).filter((className) => className);
-  const newClass = flatten(classes.map((className) => {
+  const newClass = lodash.flatten(classes.map((className) => {
 
     const elementMatch = className.match(matchers.elementSelectorRegex);
     if (elementMatch) {
@@ -51,7 +51,7 @@ export function replaceClass(classAttr: string, matchers: Matchers, baseClass?: 
       let newBaseClass = baseClass;
 
       // If parent selector has been used (e.g. $$, $$$, take parent(s) of base classes)
-      times(elementMatch[1].length - 1, () => {
+      lodash.times(elementMatch[1].length - 1, () => {
         const index = newBaseClass.lastIndexOf(matchers.element);
         if (index === -1) {
           throw new Error(`Cannot apply parent selector "${className}" to block "${newBaseClass}"`);
@@ -102,11 +102,11 @@ function traversePath(node: JsxNode, matchers: Matchers, baseClass?: string) {
     baseClass = replacement.baseClass;
   }
 
-  const children = Children.toArray(props.children).filter((child): child is ReactElement => {
+  const children = React.Children.toArray(props.children).filter((child): child is React.ReactElement => {
     return !Array.isArray(child);
   });
 
-  return createElement(
+  return React.createElement(
     node.type,
     props,
     ...traverseChildren(children, matchers, baseClass),

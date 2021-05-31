@@ -128,19 +128,21 @@ You can also use the utility with CommonJS and without JSX support:
 
 <!-- snippet: cjs -->
 ```js
-const React = require('react');
+const { createElement, Component } = require('react');
 const { expandClasses } = require('jsx-bem-classes');
 
-class Component extends React.Component {
+class SomeComponent extends Component {
   render() {
     const name = 'Anna', age = 42;
     return expandClasses(
-      React.createElement('ul', { className: '%_details' },
-        React.createElement('li', { className: '%%_name' }, [
-          'Name: ',
-          React.createElement('span', { className: '%_smallText %-highlight' }),
-        ]),
-        React.createElement('li', { className: '%%_age_' }, `Age: ${age}`),
+      createElement('section', { className: 'User %-active' },
+        createElement('ul', { className: '%_details' },
+          createElement('li', { className: '%%_name' }, [
+            'Name: ',
+            createElement('span', { className: '%_smallText %-highlight' }),
+          ]),
+          createElement('li', { className: '%%_age_' }, `Age: ${age}`),
+        ),
       ),
       { selector: '%' }
     );
