@@ -1,7 +1,10 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [
+      "cjs"
+    ]
   },
   "plugins": ["@typescript-eslint"],
   "extends": [
@@ -13,8 +16,5 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/prefer-regexp-exec": "off",
     "@typescript-eslint/no-explicit-any": "off"
-  },
-  "extraFileExtensions": [
-    "cjs"
-  ]
+  }
 }
