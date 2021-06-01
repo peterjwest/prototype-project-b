@@ -150,8 +150,8 @@ class SomeComponent extends Component {
 }
 ```
 
-[npm-badge]: https://badge.fury.io/js/react-bem-classes.svg
-[npm-url]: https://www.npmjs.com/package/react-bem-classes
+[npm-badge]: https://badge.fury.io/js/%40peterjwest%2Freact-bem-classes.svg
+[npm-url]: https://www.npmjs.com/package/@peterjwest/react-bem-classes
 
 [circle-badge]: https://circleci.com/gh/peterjwest/react-bem-classes.svg?style=shield
 [circle-url]: https://circleci.com/gh/peterjwest/react-bem-classes
