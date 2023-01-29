@@ -24,8 +24,8 @@ export const DEFAULT_OPTIONS = {
 
 function escapeRegex(string: string) {
   return string
-		.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-		.replace(/-/g, '\\x2d');
+    .replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+    .replace(/-/g, '\\x2d');
 }
 
 export function createMatchers(options: Options): Matchers {
