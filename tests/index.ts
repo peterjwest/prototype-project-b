@@ -1,12 +1,18 @@
 import assert from 'assert';
 import { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
-import { parse } from 'node-html-parser';
+import { parse, HTMLElement } from 'node-html-parser';
 
 import { replaceClass, createMatchers, DEFAULT_OPTIONS } from '../src/index';
 import { TestFunctionComponent, TestDecoratorComponent } from './components';
 
 const DEFAULT_MATCHERS = createMatchers(DEFAULT_OPTIONS);
+
+function getElement(root: HTMLElement, selector: string): HTMLElement {
+  const element = root.querySelector(selector)
+  if (!element) throw Error(`Element "${selector}" not found`)
+  return element
+}
 
 describe('replaceClass', () => {
   it('Adds a base block to an element', () => {
@@ -92,13 +98,13 @@ describe('expandClasses', () => {
     const element = createElement(TestFunctionComponent, {name: 'Anna', age: 72}, null);
     const root = parse(renderToString(element));
 
-    assert.strictEqual(root.querySelector('section').attrs.class, 'User User-active');
-    assert.strictEqual(root.querySelector('ul').attrs.class, 'User_details');
-    assert.strictEqual(root.querySelector('li:nth-child(1)').attrs.class, 'User_name');
-    assert.strictEqual(root.querySelector('li:nth-child(2)').attrs.class, 'User_age');
-    assert.strictEqual(root.querySelector('span').attrs.class, 'User_name_text User_name_text-highlight');
-    assert.strictEqual(root.querySelector('form').attrs.class, 'User_actions');
-    assert.strictEqual(root.querySelector('button').attrs.class, 'User_actions_action');
+    assert.strictEqual(getElement(root, 'section').attrs.class, 'User User-active');
+    assert.strictEqual(getElement(root, 'ul').attrs.class, 'User_details');
+    assert.strictEqual(getElement(root, 'li:nth-child(1)').attrs.class, 'User_name');
+    assert.strictEqual(getElement(root, 'li:nth-child(2)').attrs.class, 'User_age');
+    assert.strictEqual(getElement(root, 'span').attrs.class, 'User_name_text User_name_text-highlight');
+    assert.strictEqual(getElement(root, 'form').attrs.class, 'User_actions');
+    assert.strictEqual(getElement(root, 'button').attrs.class, 'User_actions_action');
   });
 })
 
@@ -107,12 +113,12 @@ describe('expandClassesDecorator', () => {
     const element = createElement(TestDecoratorComponent, {name: 'Anna', age: 72}, null);
     const root = parse(renderToString(element));
 
-    assert.strictEqual(root.querySelector('section').attrs.class, 'User User-active');
-    assert.strictEqual(root.querySelector('ul').attrs.class, 'User_details');
-    assert.strictEqual(root.querySelector('li:nth-child(1)').attrs.class, 'User_name');
-    assert.strictEqual(root.querySelector('li:nth-child(2)').attrs.class, 'User_age');
-    assert.strictEqual(root.querySelector('span').attrs.class, 'User_name_text User_name_text-highlight');
-    assert.strictEqual(root.querySelector('form').attrs.class, 'User_actions');
-    assert.strictEqual(root.querySelector('button').attrs.class, 'User_actions_action');
+    assert.strictEqual(getElement(root, 'section').attrs.class, 'User User-active');
+    assert.strictEqual(getElement(root, 'ul').attrs.class, 'User_details');
+    assert.strictEqual(getElement(root, 'li:nth-child(1)').attrs.class, 'User_name');
+    assert.strictEqual(getElement(root, 'li:nth-child(2)').attrs.class, 'User_age');
+    assert.strictEqual(getElement(root, 'span').attrs.class, 'User_name_text User_name_text-highlight');
+    assert.strictEqual(getElement(root, 'form').attrs.class, 'User_actions');
+    assert.strictEqual(getElement(root, 'button').attrs.class, 'User_actions_action');
   });
 });

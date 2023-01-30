@@ -4,7 +4,7 @@ A utility for writing more concise [BEM](http://getbem.com/) style classes in Re
 
 Instead of writing this:
 
-<!-- snippet: tsx,mjsx -->
+<!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
 
@@ -28,7 +28,7 @@ class Component extends React.Component {
 
 You can write this:
 
-<!-- snippet: tsx,mjsx -->
+<!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
 import { expandClasses } from 'react-bem-classes';
@@ -57,7 +57,7 @@ By default this uses a slightly unusual version of BEM, assuming [camel case cla
 
 If you want to use the original BEM style you can:
 
-<!-- snippet: tsx,mjsx -->
+<!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
 import { expandClasses } from 'react-bem-classes';
@@ -81,7 +81,7 @@ class Component extends React.Component {
 
 You can also change the selector character:
 
-<!-- snippet: tsx,mjsx -->
+<!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
 import { expandClasses } from 'react-bem-classes';

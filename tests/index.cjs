@@ -3,7 +3,7 @@ const { createElement, Component } = require('react');
 const { renderToString } = require('react-dom/server');
 const { parse } = require('node-html-parser');
 
-const { expandClasses } = require('../build/wrapper.js');
+const { expandClasses } = require('../build/wrapper.cjs');
 
 describe('expandClasses', () => {
   it('Maps classes in a component', () => {
