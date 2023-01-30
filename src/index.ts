@@ -14,7 +14,7 @@ interface Matchers {
   modifierSelectorRegex: RegExp;
 }
 
-export type JsxNode = JSX.Element | string | number;
+export type JsxNode = React.ReactElement | string | number;
 
 export const DEFAULT_OPTIONS = {
   selector: '&',

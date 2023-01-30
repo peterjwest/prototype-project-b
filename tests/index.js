@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDom from 'react-dom/server';
 import parser from 'node-html-parser';
 
-import { expandClasses } from '../build/es6/index.mjs';
+import { expandClasses } from '../build/es6/index.js';
 
 describe('expandClasses', () => {
   it('Maps classes in a component', () => {

@@ -8,9 +8,6 @@
   "exclude": [
     "node_modules/**"
   ],
-  "require": [
-    "ts-node/register"
-  ],
   "all": true,
   "check-coverage": true,
   "per-file": true,
