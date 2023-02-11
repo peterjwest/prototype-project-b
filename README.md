@@ -31,7 +31,7 @@ You can write this:
 <!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'react-bem-classes';
+import { expandClasses } from '@peterjwest/react-bem-classes';
 
 class Component extends React.Component {
   render() {
@@ -60,7 +60,7 @@ If you want to use the original BEM style you can:
 <!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'react-bem-classes';
+import { expandClasses } from '@peterjwest/react-bem-classes';
 
 const expandClassesClassic = (input) => expandClasses(input, { element: '__', modifier: '--' });
 
@@ -84,7 +84,7 @@ You can also change the selector character:
 <!-- snippet: tsx,jsx -->
 ```tsx
 import React from 'react';
-import { expandClasses } from 'react-bem-classes';
+import { expandClasses } from '@peterjwest/react-bem-classes';
 
 class Component extends React.Component {
   render() {
@@ -106,7 +106,7 @@ If you're using Typescript, you can instead use the decorator:
 <!-- snippet: tsx -->
 ```tsx
 import React from 'react';
-import expandClasses from 'react-bem-classes';
+import expandClasses from '@peterjwest/react-bem-classes';
 
 class Component extends React.Component {
   @expandClasses({ selector: '%' })
@@ -129,7 +129,7 @@ You can also use the utility with CommonJS and without JSX support:
 <!-- snippet: cjs -->
 ```js
 const { createElement, Component } = require('react');
-const { expandClasses } = require('react-bem-classes');
+const { expandClasses } = require('@peterjwest/react-bem-classes');
 
 class SomeComponent extends Component {
   render() {
