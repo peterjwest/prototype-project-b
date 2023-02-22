@@ -2,11 +2,12 @@
   "name": "@peterjwest/react-bem-classes",
   "version": "2.0.0",
   "description": "Decorator/utility function to expand BEM classes in React elements",
-  "main": "./build/es6/index.js",
+  "main": "./build/wrapper.cjs",
   "type": "module",
   "exports": {
-    "import": "./build/es6/index.js",
-    "require": "./build/wrapper.cjs"
+    "import": "./build/index.js",
+    "require": "./build/wrapper.cjs",
+    "types": "./build/index.d.ts"
   },
   "engines": {
     "node": ">=14"
@@ -34,9 +35,7 @@
   "homepage": "https://github.com/peterjwest/react-bem-classes#readme",
   "scripts": {
     "audit-dependencies": "yarn audit; [[ $? -ge 4 ]] && exit 1 || exit 0",
-    "build": "yarn build:es6 && yarn build:es5",
-    "build:es6": "rm -rf build/es6 && tsc --project tsconfig-build-es6.json",
-    "build:es5": "rm -rf build/es5 && tsc --project tsconfig-build-es5.json && convert-extension cjs build/es5",
+    "build": "rm -rf build/code && tsup src/index.ts --format cjs,esm --dts --out-dir build/code",
     "lint:ts": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
     "test:coverage": "rm -rf coverage && c8 mocha --node-option experimental-specifier-resolution=node --node-option loader=ts-node/esm 'tests/*.ts'",
     "test:unit": "mocha --node-option experimental-specifier-resolution=node --node-option loader=ts-node/esm 'tests/*.ts'",
