@@ -1,18 +1,38 @@
 {
-  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "requireConfigFile": false
   },
-  "plugins": ["@typescript-eslint"],
+  "env": {
+    "mocha": true
+  },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "eslint:recommended"
   ],
-  "ignorePatterns": ["build/**"],
+  "ignorePatterns": ["build/**", "tests/snippets/**", "coverage/**"],
   "rules": {
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/prefer-regexp-exec": "off",
-    "@typescript-eslint/no-explicit-any": "off"
-  }
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "object-curly-spacing": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/prefer-regexp-exec": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
 }

@@ -36,7 +36,7 @@
   "scripts": {
     "audit-dependencies": "yarn audit; [[ $? -ge 4 ]] && exit 1 || exit 0",
     "build": "rm -rf build/code && tsup src/index.ts --format cjs,esm --dts --out-dir build/code",
-    "lint:ts": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
+    "lint": "eslint .",
     "test:coverage": "rm -rf coverage && c8 mocha --node-option experimental-specifier-resolution=node --node-option loader=ts-node/esm 'tests/*.ts'",
     "test:unit": "mocha --node-option experimental-specifier-resolution=node --node-option loader=ts-node/esm 'tests/*.ts'",
     "test:unit:es5": "mocha 'tests/*.cjs'",
@@ -50,6 +50,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-react": "^7.13.13",
     "@babel/register": "^7.13.16",
