@@ -124,7 +124,7 @@ class Component extends React.Component {
 }
 ```
 
-You can also use the utility with CommonJS and without JSX support:
+You can also use the utility with CommonJS and/or without JSX support:
 
 <!-- snippet: cjs -->
 ```js
