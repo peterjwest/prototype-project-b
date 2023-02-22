@@ -9,9 +9,9 @@ import { TestFunctionComponent, TestDecoratorComponent } from './components';
 const DEFAULT_MATCHERS = createMatchers(DEFAULT_OPTIONS);
 
 function getElement(root: HTMLElement, selector: string): HTMLElement {
-  const element = root.querySelector(selector)
-  if (!element) throw Error(`Element "${selector}" not found`)
-  return element
+  const element = root.querySelector(selector);
+  if (!element) throw Error(`Element "${selector}" not found`);
+  return element;
 }
 
 describe('replaceClass', () => {
@@ -95,7 +95,7 @@ describe('replaceClass', () => {
 
 describe('expandClasses', () => {
   it('Maps classes in a component', () => {
-    const element = createElement(TestFunctionComponent, {name: 'Anna', age: 72}, null);
+    const element = createElement(TestFunctionComponent, { name: 'Anna', age: 72 }, null);
     const root = parse(renderToString(element));
 
     assert.strictEqual(getElement(root, 'section').attrs.class, 'User User-active');
@@ -106,11 +106,11 @@ describe('expandClasses', () => {
     assert.strictEqual(getElement(root, 'form').attrs.class, 'User_actions');
     assert.strictEqual(getElement(root, 'button').attrs.class, 'User_actions_action');
   });
-})
+});
 
 describe('expandClassesDecorator', () => {
   it('Maps classes in a component', () => {
-    const element = createElement(TestDecoratorComponent, {name: 'Anna', age: 72}, null);
+    const element = createElement(TestDecoratorComponent, { name: 'Anna', age: 72 }, null);
     const root = parse(renderToString(element));
 
     assert.strictEqual(getElement(root, 'section').attrs.class, 'User User-active');

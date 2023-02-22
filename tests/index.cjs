@@ -24,7 +24,7 @@ describe('expandClasses', () => {
       }
     }
 
-    const element = createElement(TestFunctionComponent, {name: 'Anna', age: 72}, null);
+    const element = createElement(TestFunctionComponent, { name: 'Anna', age: 72 }, null);
     const root = parse(renderToString(element));
 
     assert.strictEqual(root.querySelector('section').attrs.class, 'User User-active');
@@ -33,4 +33,4 @@ describe('expandClasses', () => {
     assert.strictEqual(root.querySelector('li:nth-child(2)').attrs.class, 'User_age');
     assert.strictEqual(root.querySelector('span').attrs.class, 'User_name_text User_name_text-highlight');
   });
-})
+});

@@ -20,7 +20,7 @@ export const DEFAULT_OPTIONS = {
   selector: '&',
   element: '_',
   modifier: '-',
-}
+};
 
 function escapeRegex(string: string) {
   return string
@@ -35,7 +35,7 @@ export function createMatchers(options: Options): Matchers {
     selectorRegex: new RegExp(`^(${selector})+`),
     elementSelectorRegex: new RegExp(`^((${selector})+)${escapeRegex(options.element)}`),
     modifierSelectorRegex: new RegExp(`^((${selector})+)${escapeRegex(options.modifier)}`),
-  }
+  };
 }
 
 export function replaceClass(classAttr: string, matchers: Matchers, baseClass?: string) {
@@ -128,5 +128,5 @@ export default function expandClassesDecorator(options?: Partial<Options>) {
       return expandClasses(original.apply(this, args), options);
     };
     return descriptor;
-  }
+  };
 }
