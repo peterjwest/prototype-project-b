@@ -1,3 +1,4 @@
+import { describe, it } from 'vitest';
 const assert = require('assert');
 const { createElement, Component } = require('react');
 const { renderToString } = require('react-dom/server');

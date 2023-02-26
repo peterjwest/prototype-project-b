@@ -1,3 +1,4 @@
+import { describe, it } from 'vitest';
 import assert from 'assert';
 import React from 'react';
 import ReactDom from 'react-dom/server';

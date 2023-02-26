@@ -1,3 +1,4 @@
+import { describe, it } from 'vitest';
 import assert from 'assert';
 import { createElement } from 'react';
 import { renderToString } from 'react-dom/server';

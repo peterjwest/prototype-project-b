@@ -100,18 +100,6 @@ commands:
       - store_test_results:
           path: ~/test-results/
 
-  tests-es5:
-    steps:
-      - run:
-          name: ES5 Unit tests
-          command: pnpm test:unit:es5
-
-  tests-es6:
-    steps:
-      - run:
-          name: ES6 Unit tests
-          command: pnpm test:unit:es6
-
 jobs:
   checks:
     docker:
@@ -129,8 +117,6 @@ jobs:
       - install-dependencies
       - build
       - tests
-      - tests-es5
-      - tests-es6
 
   test-node-16:
     docker:
@@ -140,8 +126,6 @@ jobs:
       - install-dependencies
       - build
       - tests
-      - tests-es5
-      - tests-es6
 
   test-node-18:
     docker:
@@ -151,8 +135,6 @@ jobs:
       - install-dependencies
       - build
       - tests
-      - tests-es5
-      - tests-es6
       - coveralls/upload
 
   checks-latest:
@@ -171,8 +153,6 @@ jobs:
       - install-dependencies-latest
       - build
       - tests
-      - tests-es5
-      - tests-es6
 
   test-node-16-latest:
     docker:
@@ -182,8 +162,6 @@ jobs:
       - install-dependencies-latest
       - build
       - tests
-      - tests-es5
-      - tests-es6
 
   test-node-18-latest:
     docker:
@@ -193,8 +171,6 @@ jobs:
       - install-dependencies-latest
       - build
       - tests
-      - tests-es5
-      - tests-es6
 
 workflows:
   version: 2

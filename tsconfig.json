@@ -21,7 +21,6 @@
     "esm": true
   },
   "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts"
+    "**/*.ts"
   ]
 }
