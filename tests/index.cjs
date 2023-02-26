@@ -12,11 +12,11 @@ describe('expandClasses', () => {
         return expandClasses(
           createElement('section', { className: 'User %-active' },
             createElement('ul', { className: '%_details' },
-              createElement('li', { className: '%%_name' }, [
+              createElement('li', { className: '%%_name', key: '1' }, [
                 'Name: ',
-                createElement('span', { className: '%_text %-highlight' }, this.props.name),
+                createElement('span', { className: '%_text %-highlight', key: '1a' }, this.props.name),
               ]),
-              createElement('li', { className: '%%_age' }, `Age: ${this.props.age}`),
+              createElement('li', { className: '%%_age', key: '2' }, `Age: ${this.props.age}`),
             ),
           ),
           { selector: '%' }

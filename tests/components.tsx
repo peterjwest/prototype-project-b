@@ -12,10 +12,10 @@ export class TestFunctionComponent extends Component<TestFunctionProps> {
     return expandClasses(<body>
       <section className="User &-active">
         <ul className="&_details">
-          <li className="&&_name">
+          <li className="&&_name" key="1">
             Name: <span className="&_text &-highlight">{this.props.name}</span>
           </li>
-          <li className="&&_age">Age: {this.props.age}</li>
+          <li className="&&_age" key="2">Age: {this.props.age}</li>
         </ul>
         <div>
           <form className="&_actions">
@@ -33,10 +33,10 @@ export class TestDecoratorComponent extends Component<TestFunctionProps> {
     return <body>
       <section className="User &-active">
         <ul className="&_details">
-          <li className="&&_name">
-            Name: <span className="&_text &-highlight">{this.props.name}</span>
+          <li className="&&_name" key="1">
+            Name: <span className="&_text &-highlight" key="1a">{this.props.name}</span>
           </li>
-          <li className="&&_age">Age: {this.props.age}</li>
+          <li className="&&_age" key="2">Age: {this.props.age}</li>
         </ul>
         <div>
           <form className="&_actions">
