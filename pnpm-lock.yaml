@@ -14,7 +14,6 @@ specifiers:
   '@typescript-eslint/parser': ^5.49.0
   '@vitest/coverage-c8': ^0.29.1
   c8: ^7.12.0
-  convert-extension: ^0.3.0
   eslint: ^8.33.0
   lodash: ^4.17.21
   node-html-parser: ^6.1.4
@@ -44,7 +43,6 @@ devDependencies:
   '@typescript-eslint/parser': 5.51.0_7kw3g6rralp5ps6mg3uyzz6azm
   '@vitest/coverage-c8': 0.29.1_vitest@0.29.1
   c8: 7.12.0
-  convert-extension: 0.3.0
   eslint: 8.34.0
   node-html-parser: 6.1.4
   only-allow: 1.1.1
@@ -2519,20 +2517,6 @@ packages:
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-    dev: true
-
-  /convert-extension/0.3.0:
-    resolution: {integrity: sha512-TJ3RdeL+GXOxz4jdYntfNU2vEBb4LBJppNxVD+IVZTdqvvhfthSCSh7QHi5QxSQSzsJKc8L6FgFDmeTZ/89XGA==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      '@babel/core': 7.21.0
-      '@babel/traverse': 7.20.13
-      glob: 7.2.3
-      mkdirp: 1.0.4
-      multiline-ts: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /convert-source-map/1.9.0:
