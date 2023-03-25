@@ -1,6 +1,5 @@
 /node_modules
 /build/code
-/.nyc_output
 /coverage
 /tests/snippets/*
 !/tests/snippets/config.json
