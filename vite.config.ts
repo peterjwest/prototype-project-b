@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     include: [...configDefaults.include, 'tests/index.*'],
     coverage: {
-      provider: 'c8',
+      provider: 'v8',
       include: [
         'src/**',
       ],
@@ -17,11 +17,13 @@ export default defineConfig({
         '.ts',
       ],
       all: true,
-      perFile: true,
-      branches: 80,
-      lines: 80,
-      functions: 80,
-      statements: 80,
+      thresholds: {
+        perFile: true,
+        branches: 80,
+        lines: 80,
+        functions: 80,
+        statements: 80,
+      },
     },
   },
 });
