@@ -53,9 +53,9 @@ class Component extends React.Component {
 
 The current block and any elements are prepended onto each class with a selector character `&`. Using two selector characters (e.g. `&&`) ignores the last current element, which allows more flexible nesting (You can use more selector characters to ignore more elements).
 
-By default this uses a slightly unusual version of BEM, assuming [camel case classes](https://en.bem.info/methodology/naming-convention/#camelcase-style), which is more concise and more legible in my opinion.
+By default this uses the [React BEM style](https://en.bem.info/methodology/naming-convention/#react-style), which is more concise and more legible in my opinion.
 
-If you want to use the original BEM style you can:
+If you want to use the original BEM style you can customise the delimiters:
 
 <!-- snippet: tsx,jsx -->
 ```tsx
