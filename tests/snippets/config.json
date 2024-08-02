@@ -1,5 +1,5 @@
 {
-  "tsx": { "extension": "tsx", "command": ["ts-node"] },
-  "jsx": { "extension": "jsx", "command": ["node", "-r", "@babel/register"]},
+  "tsx": { "extension": "tsx", "command": ["tsx"] },
+  "jsx": { "extension": "jsx", "command": ["bash", "./jsx.sh"]},
   "cjs": { "extension": "cjs", "command": ["node"]}
 }
