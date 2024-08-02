@@ -72,6 +72,9 @@ commands:
       - run:
           name: Audit production dependencies
           command: pnpm audit --prod
+      - run:
+          name: General linting
+          command: pnpm lint:unlinted
 
   build:
     steps:
