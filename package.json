@@ -2,12 +2,11 @@
   "name": "@peterjwest/react-bem-classes",
   "version": "2.0.0",
   "description": "Decorator/utility function to expand BEM classes in React elements",
-  "main": "./build/wrapper.cjs",
+  "main": "./build/code/index.js",
   "type": "module",
   "exports": {
-    "import": "./build/index.js",
-    "require": "./build/wrapper.cjs",
-    "types": "./build/index.d.ts"
+    "import": "./build/code/index.js",
+    "require": "./build/wrapper.cjs"
   },
   "engines": {
     "node": ">=14"
