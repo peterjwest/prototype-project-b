@@ -76,7 +76,7 @@ commands:
     steps:
       - run:
           name: Lint Typescript/Javascript code
-          command: pnpm lint
+          command: pnpm lint:ts
       - run:
           name: Audit production dependencies
           command: pnpm audit --prod

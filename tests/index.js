@@ -20,7 +20,7 @@ describe('expandClasses', () => {
               React.createElement('li', { className: '%%_age', key: '2' }, `Age: ${this.props.age}`),
             ),
           ),
-          { selector: '%' }
+          { selector: '%' },
         );
       }
     }
