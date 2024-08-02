@@ -27,6 +27,9 @@ importers:
       '@babel/register':
         specifier: ^7.24.6
         version: 7.24.6(@babel/core@7.25.2)
+      '@total-typescript/ts-reset':
+        specifier: ^0.5.1
+        version: 0.5.1
       '@types/lodash':
         specifier: ^4.17.7
         version: 4.17.7
@@ -1156,6 +1159,9 @@ packages:
     resolution: {integrity: sha512-DPi0ubYhSow/00YqmG1jWm3qt1F8aXziHc/UNy8bo9cpCacqhuWu+iSq/fp2SyEQK7iYTZ60fBU9cat3MXTjIQ==}
     cpu: [x64]
     os: [win32]
+
+  '@total-typescript/ts-reset@0.5.1':
+    resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
 
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
@@ -3658,6 +3664,8 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.19.2':
     optional: true
+
+  '@total-typescript/ts-reset@0.5.1': {}
 
   '@tsconfig/node10@1.0.11': {}
 
