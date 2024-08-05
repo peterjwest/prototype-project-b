@@ -1,1 +1,1 @@
-ignores: ["@babel/cli", "@babel/eslint-parser", "@total-typescript/ts-reset", "@vitest/coverage-v8", "tsx"]
+ignores: ["@babel/cli", "@babel/eslint-parser", "@vitest/coverage-v8", "tsx"]

@@ -34,7 +34,7 @@
   "homepage": "https://github.com/peterjwest/react-bem-classes#readme",
   "scripts": {
     "build": "rm -rf build/code && tsup src/index.ts --format cjs,esm --dts --out-dir build/code",
-    "lint:ts": "eslint .",
+    "lint:ts": "eslint",
     "lint:dependencies": "depcheck",
     "lint:unlinted": "unlinted",
     "test:coverage": "vitest run --coverage",
