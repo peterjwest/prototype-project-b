@@ -1,6 +1,6 @@
 {
   "name": "@peterjwest/react-bem-classes",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Decorator/utility function to expand BEM classes in React elements",
   "main": "./build/code/index.js",
   "type": "module",
